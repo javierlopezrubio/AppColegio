@@ -5,11 +5,25 @@ package appcolegio;
  * @author Grupo 5
  */
 public class Asignatura {
-    private String nombre;
-    private Curso curso;
-    private Profesor profesor;
-    private int codigoAsignatura;
+    private final String nombre;
+    private final Curso curso;
+    private final Profesor profesor;
+    private static int codigoAsignatura;
 
+    /**
+     * Constructor de Asignatura recibe: 
+     * @param name
+     * @param curso
+     * @param profesor
+     * El código de asignatura se autogenera
+     */
+    public Asignatura(String name, Curso curso, Profesor profesor){
+        this.nombre = name;
+        this.curso = curso;
+        this.profesor = profesor;
+        this.codigoAsignatura++;
+    }
+    
     /**
      * @return the nombre
      */

@@ -11,8 +11,9 @@ public class Profesor {
     private String nombre;
     private ArrayList<Asignatura> asignaturas;
     private Curso curso;
-    private int codigoProfesor;
+    private static int codigoProfesor;
 
+    
     /**
      * @return the nombre
      */

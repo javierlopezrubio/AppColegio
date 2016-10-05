@@ -8,12 +8,28 @@ import java.util.Date;
  * @author Grupo 5
  */
 public class Alumno {
-    private Date fechaNacimiento;
-    private String nombre;
-    private int codigoAlumno;
-    private Curso curso;
-    private File foto;
-
+    private final Date fechaNacimiento;
+    private final String nombre;
+    private static int codigoAlumno;
+    private final Curso curso;
+    private final File foto;
+    
+    /**
+     * Constructor de la clase alumno recibe:
+     * @param date
+     * @param name
+     * @param curso
+     * @param file
+     * El código de alumno se autoasignará.
+     */
+    public Alumno(Date date, String name, Curso curso, File file){
+        this.fechaNacimiento = date;
+        this.nombre = name;
+        this.foto = file;
+        this.curso = curso;
+        this.codigoAlumno++;
+    }
+    
     /**
      * @return the edad
      */
