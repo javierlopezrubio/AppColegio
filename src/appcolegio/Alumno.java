@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  *
- * @author Javier
+ * @author Grupo 5
  */
 public class Alumno {
     private Date fechaNacimiento;
