@@ -28,8 +28,8 @@ public class Curso {
     /**
      * @return the alumnos
      */
-    public ArrayList<Alumno> getAlumnos() {
-        return alumnos;
+    public Iterable<Alumno> getAlumnos() {
+        return Collections.unmodifiableList(alumnos);
     }
 
     /**
