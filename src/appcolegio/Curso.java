@@ -6,6 +6,7 @@
 package appcolegio;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -16,5 +17,33 @@ public class Curso {
     private ArrayList<Alumno> alumnos;
     private ArrayList<Asignatura> asignaturas;
     private int codigoCurso;
+
+    /**
+     * @return the profesor
+     */
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    /**
+     * @return the alumnos
+     */
+    public ArrayList<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    /**
+     * @return the asignaturas
+     */
+    public Iterable<Asignatura> getAsignaturas() {
+        return Collections.unmodifiableList(asignaturas);
+    }
+
+    /**
+     * @return the codigoCurso
+     */
+    public int getCodigoCurso() {
+        return codigoCurso;
+    }
     
 }
